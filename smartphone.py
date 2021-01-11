@@ -8,12 +8,12 @@ def callback_receive_radio_data(msg):
     rospy.loginfo("Message received: ")
     rospy.loginfo(msg)
 
-    
+
 
 if __name__== '__main__':
     rospy.init_node('smartphone')
 
-    sub = rospy.Subscriber("/robot_news_radio",callback_receive_radio_data)
+    sub = rospy.Subscriber("/robot_news_radio",String,callback_receive_radio_data)
 
     #So eine art loop funktion, die die obrigen Zeilen immer wieder aufruft
     rospy.spin()
