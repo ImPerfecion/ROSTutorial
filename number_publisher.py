@@ -11,7 +11,7 @@ if __name__ == '__main__':
 #Topic Name, Datentyp, Buffer
     pub = rospy.Publisher("/number",Int64, queue_size=10)
 
-    #Publish with 2 Hertz
+    #Publish with 2 Hertz. Rate class helps to run loops at a desired frequency
     rate = rospy.Rate(0.25)
 
     while not rospy.is_shutdown():
